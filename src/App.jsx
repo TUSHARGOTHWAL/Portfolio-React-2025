@@ -8,7 +8,6 @@ import Projects from './components/Projects.jsx'
 import { VelocityScroll } from './components/VelocityScroll.jsx'
 import RevealLinks from './components/RevealLinks.jsx'
 
-
 function App() {
   return (
     <>

@@ -77,6 +77,7 @@ function Safari({
         {imageSrc && (
           <image
             href={imageSrc}
+            cover="fill"
             width="1200"
             height="700"
             x="1"

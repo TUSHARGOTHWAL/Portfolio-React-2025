@@ -24,7 +24,7 @@ const NavbarOptions = () => {
           opacity: 0,
         }));
       }}
-      className="relative mx-auto flex w-fit rounded-full border-2 border-yellow-300 bg-gray-300 p-1 "
+      className="relative mx-auto flex w-fit rounded-full border-2 border-gray-950 bg-gray-300 p-1 "
     >
       <Tab setPosition={setPosition}>Home</Tab>
       <Tab setPosition={setPosition}>Pricing</Tab>

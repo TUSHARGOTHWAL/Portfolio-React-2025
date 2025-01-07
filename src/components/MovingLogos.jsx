@@ -3,13 +3,28 @@ import { motion, useAnimation } from 'framer-motion';
 
 // Import your logo images here
 import reactLogo from '../assets/react.svg';
-
-import htmlLogo from '../assets/google-cloud.svg';
+import google_cloud from '../assets/google-cloud.svg';
+import c from '../assets/c.svg';
+import css from '../assets/css.svg';
+import html from '../assets/html.svg';
+import node from '../assets/node.svg';
+import figma from '../assets/figma.svg';
+import firebase from '../assets/firebase.svg';
+import framer from '../assets/framer.svg';
+import github from '../assets/github.svg';
 
 const logos = [
   { src: reactLogo, alt: 'React' },
-
-  { src: htmlLogo, alt: 'HTML' },
+  { src: google_cloud, alt: 'HTML' },
+  {src: c, alt: 'C'},
+  {src: css, alt: 'CSS'},
+  {src: html, alt: 'HTML'},
+  {src: node, alt: 'Node'},
+  {src: figma, alt: 'Figma'},
+  {src: firebase, alt: 'Firebase'},
+  {src: framer, alt: 'Framer'},
+  {src: github, alt: 'Github'},
+  
 
 ];
 

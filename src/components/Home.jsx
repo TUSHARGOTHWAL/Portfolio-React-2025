@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useRef } from 'react';
+
 import { motion, AnimatePresence, useMotionTemplate, useMotionValue, animate } from 'framer-motion';
 import Navbar from './Navbar';
 import userImage from '../assets/user-image.png';
 import MovingLogos from './MovingLogos';
+import RainbowButton from './RainbowButton';
+import ConfettiFireworks from './ConfettiFireworks';
 
 const greetings = [
   {
@@ -79,6 +83,19 @@ const Home = () => {
 
   const backgroundImage = useMotionTemplate`radial-gradient(155% 180% at 50% 0%, #000000 50%, ${color})`;
 
+
+ const confettiRef = useRef(null);
+
+  const handleButtonClick = () => {
+    // Trigger confetti when the button is clicked
+    if (confettiRef.current) {
+      confettiRef.current.trigger();
+    }
+  };
+
+
+
+
   return (
       <>
     <motion.div
@@ -115,7 +132,8 @@ const Home = () => {
                     }}
                   className="flex flex-col items-center py-4  w-48 "
                 >
-                  <motion.h1 className="text-2xl font-bold ">
+                  <motion.h1 className="text-2xl font-bold bg-gradient-to-r text-gray-300 font-extrabold px-6 py-3 border-4 bg-opacity-10 rounded-lg shadow-lg hover:shadow-xl"
+                  >
                     {greetings[greeting].text}
                   </motion.h1>
                 </motion.div>
@@ -192,36 +210,43 @@ const Home = () => {
               Web Developer & Designer
             </motion.p>
             <div className="buttoContainer flex flex-row justify-center gap-4">
-            <motion.button drag className=' border-red-300 py-2 px-6 mt-10 border-4 rounded-full hover:bg-red-300 hover:text-black' 
+
+                
+
+            
+            <motion.div drag className='py-2 px-6 mt-10'
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-                duration: 1.2,
-                delay: 0.4,
-                ease: [0.22, 1, 0.36, 1],
-                }}
+              duration: 1.2,
+              delay: 0.4,
+              ease: [0.22, 1, 0.36, 1],
+            }}
                >
-                 <p>
-                Resume
-                </p>
-                <span style={{fontSize:10 }}> Drag me!!🤫</span>
-               
-            </motion.button>
-            <motion.button drag className='border-red-300 py-2 px-6 mt-10 border-4 rounded-full hover:bg-red-300 hover:text-black' 
+                <ConfettiFireworks ref={confettiRef} />
+            <RainbowButton >
+              <span className='text-md text-center' onClick={handleButtonClick} >Drag MEEEE</span>
+            </RainbowButton>
+
+            </motion.div>
+
+
+            <motion.div drag className='py-2 px-6 mt-10'
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-                duration: 1.2,
-                delay: 0.4,
-                ease: [0.22, 1, 0.36, 1],
-                }}
+              duration: 1.2,
+              delay: 0.4,
+              ease: [0.22, 1, 0.36, 1],
+            }}
                >
-                 <p>
-                Resume
-                </p>
-                <span style={{fontSize:10 }}> Drag me!!🤫</span>
-               
-            </motion.button>
+                <ConfettiFireworks ref={confettiRef} />
+            <RainbowButton onClick={handleButtonClick}>
+              Something
+            </RainbowButton>
+            </motion.div>
+
+            
 
 
             </div>

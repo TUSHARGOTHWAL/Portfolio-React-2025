@@ -10,15 +10,18 @@ function Projects() {
           title: "Resume-AI",
           description: "An AI-powered platform that assists HR professionals by evaluating resumes and providing insights using OpenAI and LangChain.",
           url: "resume-ai.com",
-          imageSrc: "https://portfolio-react-five-amber.vercel.app/resumeai.png",
+          imageSrc: "https://i.ibb.co/qrPzw6p/resume-ai.png",
           tech: ["React", "Node.js", "MongoDB", "OpenAI", "Tailwind CSS"]
         },
+
+        
+
         {
           id: 2,
           title: "DevSource Community",
           description: "A community-driven platform for developers to share knowledge, resources, and collaborate on projects. Features include real-time messaging, project sharing, and resource management.",
           url: "devsource.com",
-          imageSrc: "https://portfolio-react-five-amber.vercel.app/dscportal.png",
+          imageSrc: "https://i.ibb.co/c8BSpqz/devsource.png",
           tech: ["React", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"]
         },
         {
@@ -26,7 +29,7 @@ function Projects() {
           title: "ChatItOut",
           description: "A real-time chat application for seamless team collaboration, featuring media sharing, emoji support, and Firebase integration.",
           url: "chatitout.com",
-          imageSrc: "https://portfolio-react-five-amber.vercel.app/chatapp.png",
+          imageSrc: "https://i.ibb.co/YWZVw2K/cio.png",
           tech: ["React", "Firebase", "TypeScript", "Next.js", "AWS"]
         },
         {
@@ -34,7 +37,7 @@ function Projects() {
           title: "BloodChain",
           description: "A blockchain-based blood donation platform that enables secure donor connections and decentralized identity management.",
           url: "bloodchain.com",
-          imageSrc: "https://portfolio-react-five-amber.vercel.app/blockchain.png",
+          imageSrc: "https://i.ibb.co/qnkbKnD/bc.png",
           tech: ["React", "Node.js", "Blockchain", "Smart Contracts", "Tailwind CSS"]
         }
       ];
@@ -85,7 +88,7 @@ function Projects() {
           >
             <Safari 
               url={project.url} 
-              className="w-full h-full"
+              className="w-full h-full object-cover"
               
               imageSrc={project.imageSrc}
             />
