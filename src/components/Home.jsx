@@ -139,7 +139,24 @@ const Home = () => {
                 </motion.div>
               </AnimatePresence>
               <span className="text-4xl mt-40 text-center">Welcome to my portfolio</span>
+              
             </motion.div>
+            <motion.div drag className=' mt-5'
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 1.2,
+              delay: 0.4,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+               >
+                <ConfettiFireworks ref={confettiRef} />
+            <RainbowButton >
+              <span className='text-md text-center' onClick={handleButtonClick} >Drag MEEEE</span>
+            </RainbowButton>
+            </motion.div>
+          
+
           </div>
           
           <div className="w-full md:w-1/3 flex justify-center relative my-8 md:my-0">
