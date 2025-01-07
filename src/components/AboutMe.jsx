@@ -71,7 +71,7 @@ const HeaderBlock = () => (
       href="#"
       className="flex items-center gap-1 text-red-300 hover:underline"
     >
-      Contact me <FiArrowRight />
+      About Me? <FiArrowRight />
     </a>
   </Block>
 );

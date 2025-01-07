@@ -6,6 +6,8 @@ import AboutMe from './components/AboutMe'
 import { TimelineDemo } from './components/TimelineDemo.jsx'
 import Projects from './components/Projects.jsx'
 import { VelocityScroll } from './components/VelocityScroll.jsx'
+import RevealLinks from './components/RevealLinks.jsx'
+
 
 function App() {
   return (
@@ -31,14 +33,22 @@ function App() {
 <TimelineDemo />
 <Projects></Projects>
 
-<VelocityScroll defaultVelocity={2} numRows={2} className={"bg-gradient-to-r from-blue-500 to-green-500"}>
+<VelocityScroll defaultVelocity={2} numRows={2} className={"bg-gradient-to-r from-blue-500 to-green-500 h-80 "  } >
       Developer Designer Community
     </VelocityScroll>
 
-    <section className='h-96 bg-gradient-to-r from-blue-500 to-green-500'>
+    <section className="h-96 bg-gradient-to-r from-blue-500 to-green-500 flex flex-col md:flex-row justify-center items-center pb-40 gap-10 md:gap-40">
+  {/* Main Heading */}
+  <h1 className="text-4xl md:text-6xl text-black font-extrabold text-center border-b-4 border-black ">FIND ME?</h1>
 
-    </section>
+  {/* Placeholder for the RevealLinks component */}
+  <RevealLinks />
+</section>
+
+
     </>
+
+
   )
 }
 

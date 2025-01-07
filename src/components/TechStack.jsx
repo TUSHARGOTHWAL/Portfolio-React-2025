@@ -12,7 +12,7 @@ const TechStack = () => {
           className="text-9xl font-bold text-center mb-12 text-gray-100"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
         >
           WHO AM I?
         </motion.h2>
