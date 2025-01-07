@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from './components/home'
+import Home from './components/Home.jsx'
 import TechStack from './components/TechStack'
 import AboutMe from './components/AboutMe'
 
