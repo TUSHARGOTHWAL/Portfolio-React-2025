@@ -141,7 +141,7 @@ const Home = () => {
                 </motion.div>
               </AnimatePresence>
             </motion.div>
-            <motion.div drag className='py-2 px-6 '
+            <motion.div drag className='py-2 px-6 mt-10'
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
