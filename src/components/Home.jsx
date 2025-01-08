@@ -130,9 +130,10 @@ const Home = () => {
                       y: { type: "spring", stiffness: 300, damping: 30 },
                       opacity: { duration: 0.2 }
                     }}
-                  className="flex flex-col items-center py-4  w-48 "
+                  className="flex flex-col items-center py-4  w-80 "
                 >
-                  <motion.h1 className="text-6xl font-bold bg-gradient-to-r text-gray-300  px-6 py-3  bg-opacity-10 rounded-lg shadow-lg hover:shadow-xl"
+                  <motion.h1 className="text-5xl font-bold bg-gradient-to-r text-gray-300  px-6 py-3  bg-opacity-10 rounded-lg shadow-lg hover:shadow-xl"
+                  style={{fontFamily:'DesignerFont'}}
                   >
                     {greetings[greeting].text}
                   </motion.h1>

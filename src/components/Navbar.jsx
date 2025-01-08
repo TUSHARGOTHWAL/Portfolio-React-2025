@@ -27,11 +27,11 @@ const NavbarOptions = () => {
       className="relative mx-auto flex w-fit rounded-full border-2 border-gray-950 bg-gray-300 p-1 "
     >
       <Tab setPosition={setPosition}>Home</Tab>
-      <Tab setPosition={setPosition}>About Me</Tab>
+      <Tab setPosition={setPosition}>About</Tab>
       <Tab setPosition={setPosition}>My Work</Tab>
       <Tab setPosition={setPosition}>DevSource</Tab>
-      <Tab setPosition={setPosition}>Contact me</Tab>
-      <Tab setPosition={setPosition}>Blog</Tab>
+      <Tab setPosition={setPosition}>Contact</Tab>
+
 
       <Cursor position={position} />
     </ul>

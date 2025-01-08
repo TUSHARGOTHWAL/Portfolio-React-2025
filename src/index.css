@@ -17,6 +17,9 @@
 @font-face {
   font-family: 'CraftsStoryDemoRegular'; /*a name to be used later*/
   src: url('./assets/CraftsStoryDemoRegular.ttf'); /*URL to font*/
+
+  font-family: 'DesignerFont';
+  src: url('//src/assets/Dirtyline 36daysoftype 2022.otf');
 }
 
 @layer utilities {
