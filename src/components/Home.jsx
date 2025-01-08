@@ -201,7 +201,7 @@ const Home = () => {
               Hi, I'm Tushar Gothwal
             </motion.h1>
             <motion.p
-              className="mt-4 text-xl text-center text-gray-300"
+              className="mt-4 mb-4 text-xl text-center text-gray-300"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
