@@ -210,7 +210,7 @@ const Home = () => {
                   ease: [0.22, 1, 0.36, 1],
                 }}
             >
-              Web Developer & Designer
+              Developer | Designer | Community
             </motion.p>
             <div className="buttoContainer flex flex-row justify-center gap-4">
 
