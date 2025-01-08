@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from './components/Home.jsx'
+import Home from './components/Home'
 import TechStack from './components/TechStack'
 import AboutMe from './components/AboutMe'
 
@@ -7,6 +7,8 @@ import { TimelineDemo } from './components/TimelineDemo.jsx'
 import Projects from './components/Projects.jsx'
 import { VelocityScroll } from './components/VelocityScroll.jsx'
 import RevealLinks from './components/RevealLinks.jsx'
+import ContactForm from './components/ContactForm.jsx'
+import MyProjectsText from './components/MyProjectsText.jsx'
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
 
 
 <TimelineDemo />
+<MyProjectsText></MyProjectsText>
 <Projects></Projects>
 
 <VelocityScroll defaultVelocity={2} numRows={2} className={"bg-gradient-to-r from-blue-500 to-green-500 h-80 "  } >
@@ -44,6 +47,8 @@ function App() {
   <RevealLinks />
 </section>
 
+
+<ContactForm></ContactForm>
 
     </>
 

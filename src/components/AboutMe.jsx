@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
-import { SiGithub, SiTiktok, SiX, SiYoutube } from "react-icons/si";
+import { SiInstagram, SiLinkedin, SiX, SiYoutube } from "react-icons/si";
 
 const AboutMe = () => {
   return (
@@ -83,10 +83,10 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-red-500 md:col-span-3"
+      className="col-span-6 bg-red-700 md:col-span-3"
     >
       <a
-        href="#"
+        href="https://www.youtube.com/@tushargothwal4110"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiYoutube />
@@ -97,13 +97,13 @@ const SocialsBlock = () => (
         rotate: "-2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-green-600 md:col-span-3"
+      className="col-span-6 bg-blue-700 md:col-span-3"
     >
       <a
-        href="#"
+        href="https://www.linkedin.com/in/tushar-gothwal-here"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <SiGithub />
+        <SiLinkedin />
       </a>
     </Block>
     <Block
@@ -111,13 +111,13 @@ const SocialsBlock = () => (
         rotate: "-2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-zinc-50 md:col-span-3"
-    >
+      className="col-span-6 bg-gradient-to-tr from-pink-500 via-purple-500 to-orange-500 md:col-span-3"
+      >
       <a
-        href="#"
+        href="https://www.instagram.com/gothwaltushar03/"
         className="grid h-full place-content-center text-3xl text-black"
       >
-        <SiTiktok />
+        <SiInstagram />
       </a>
     </Block>
     <Block
@@ -125,10 +125,10 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-blue-500 md:col-span-3"
+      className="col-span-6 bg-neutral-800 md:col-span-3"
     >
       <a
-        href="#"
+        href="https://x.com/TusharGothwal03"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <SiX />

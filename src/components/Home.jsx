@@ -132,29 +132,14 @@ const Home = () => {
                     }}
                   className="flex flex-col items-center py-4  w-48 "
                 >
-                  <motion.h1 className="text-2xl font-bold bg-gradient-to-r text-gray-300 font-extrabold px-6 py-3 border-4 bg-opacity-10 rounded-lg shadow-lg hover:shadow-xl"
+                  <motion.h1 className="text-6xl font-bold bg-gradient-to-r text-gray-300  px-6 py-3  bg-opacity-10 rounded-lg shadow-lg hover:shadow-xl"
                   >
                     {greetings[greeting].text}
                   </motion.h1>
                 </motion.div>
               </AnimatePresence>
-              <span className="text-4xl mt-40 text-center">Welcome to my portfolio</span>
-              
             </motion.div>
-            <motion.div drag className=' mt-5'
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1.2,
-              delay: 0.4,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-               >
-                <ConfettiFireworks ref={confettiRef} />
-            <RainbowButton >
-              <span className='text-md text-center' onClick={handleButtonClick} >Drag MEEEE</span>
-            </RainbowButton>
-            </motion.div>
+            
           
 
           </div>
@@ -184,7 +169,7 @@ const Home = () => {
               className="py-8 md:py-16"
               style={{
                   margin: "auto",
-                  width: "60%",
+                  width: "70%",
                   maxWidth: "300px",
                   position: "relative",
                   zIndex: 2,
@@ -258,9 +243,10 @@ const Home = () => {
             }}
                >
                 <ConfettiFireworks ref={confettiRef} />
-            <RainbowButton onClick={handleButtonClick}>
-              Something
+                <a href="https://drive.google.com/file/d/1mbg_RLthXm3L5cCRmgvPKmP8ZmpiEdAD/view?usp=drivesdk"><RainbowButton onClick={handleButtonClick}  >    
+            My Resume
             </RainbowButton>
+            </a>      
             </motion.div>
 
             

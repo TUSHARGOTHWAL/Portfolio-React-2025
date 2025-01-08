@@ -2,16 +2,25 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Safari from './Safari';
 import RainbowButton from './RainbowButton';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import ProjectModal from './ProjectModal';
 
 function Projects() {
-    const projects = [
+
+  const[eventsModal, setEventsModal] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);  
+
+
+ const projects = [
         {
           id: 1,
           title: "Resume-AI",
           description: "An AI-powered platform that assists HR professionals by evaluating resumes and providing insights using OpenAI and LangChain.",
           url: "resume-ai.com",
           imageSrc: "https://i.ibb.co/qrPzw6p/resume-ai.png",
-          tech: ["React", "Node.js", "MongoDB", "OpenAI", "Tailwind CSS"]
+          tech: ["React", "Node.js", "MongoDB", "OpenAI", "Tailwind CSS"],
+          imgDes:"This project presents an AI-enhanced resume evaluation platform designed to streamline the hiring process by integrating advanced natural language processing (NLP) and conversational AI models. With a frontend developed in React TypeScript and secure user management through Clerk, the system provides an interactive, user-friendly interface for HR professionals to analyze resumes efficiently. The backend, powered by Convex, enables structured data management, supporting seamless resume parsing and retrieval. A key component of this platform is the integration of LangChain, enabling a conversational interface that allows HR professionals to interact with the system dynamically and receive instant insights on candidate profiles. Additionally, the project leverages OpenAI's capabilities to assess resume content, focusing on candidate skills, experiences, and job fit. Through comprehensive functional testing, this platform demonstrates improvements in parsing accuracy and response time,aiming to reduce human bias and enhance objectivity in candidate evaluations. Ultimately, the system contributes to a more efficient recruitment process by automating routine assessments, thereby allowing HR teams to focus on strategic hiring decisions. This report documents the platform's development, methodologies, and evaluation metrics, along with proposed future enhancements to expand its capabilities and improve AI-based resume analysis in recruitment. "
         },
 
         
@@ -22,7 +31,9 @@ function Projects() {
           description: "A community-driven platform for developers to share knowledge, resources, and collaborate on projects. Features include real-time messaging, project sharing, and resource management.",
           url: "devsource.com",
           imageSrc: "https://i.ibb.co/c8BSpqz/devsource.png",
-          tech: ["React", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"]
+          tech: ["React", "Node.js", "MongoDB", "Socket.io", "Tailwind CSS"],
+          imgDes: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet. sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.sicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet. ",
+
         },
         {
           id: 3,
@@ -30,7 +41,9 @@ function Projects() {
           description: "A real-time chat application for seamless team collaboration, featuring media sharing, emoji support, and Firebase integration.",
           url: "chatitout.com",
           imageSrc: "https://i.ibb.co/YWZVw2K/cio.png",
-          tech: ["React", "Firebase", "TypeScript", "Next.js", "AWS"]
+          tech: ["React", "Firebase", "TypeScript", "Next.js", "AWS"],
+          imgDes: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.",
+
         },
         {
           id: 4,
@@ -38,7 +51,9 @@ function Projects() {
           description: "A blockchain-based blood donation platform that enables secure donor connections and decentralized identity management.",
           url: "bloodchain.com",
           imageSrc: "https://i.ibb.co/qnkbKnD/bc.png",
-          tech: ["React", "Node.js", "Blockchain", "Smart Contracts", "Tailwind CSS"]
+          tech: ["React", "Node.js", "Blockchain", "Smart Contracts", "Tailwind CSS"],
+          imgDes: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.",
+
         }
       ];
       
@@ -64,7 +79,10 @@ function Projects() {
       }
     }
   };
-
+  const openModal = (project) => {
+    setSelectedProject(project); // Set the selected project
+    setEventsModal(true);
+  };
   return (
     <motion.div 
       className="w-full min-h-screen space-y-40 mb-36"
@@ -139,12 +157,15 @@ function Projects() {
                 
               ))}
             </motion.div>
-            <RainbowButton onClick={() => window.location.href = projects.url}>
+            <RainbowButton onClick={() => openModal(project)}>
+
   Click Me
 </RainbowButton>
           </motion.div>
         </motion.div>
       ))}
+            {eventsModal && <ProjectModal closeModal={() => setEventsModal(false)}  project={selectedProject} />}
+
     </motion.div>
   );
 }
