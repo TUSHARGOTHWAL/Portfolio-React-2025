@@ -47,14 +47,14 @@ function Projects() {
         },
         {
           id: 4,
-          title: "BloodChain",
-          description: "A blockchain-based blood donation platform that enables secure donor connections and decentralized identity management.",
-          url: "bloodchain.com",
-          imageSrc: "https://i.ibb.co/qnkbKnD/bc.png",
-          tech: ["React", "Node.js", "Blockchain", "Smart Contracts", "Tailwind CSS"],
-          imgDes: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia neque ducimus dolor perspiciatis consequuntur atque quod itaque, aut fugit amet quas in temporibus accusantium dolorem! Illum, eligendi, cum aut repellat est dolorem aliquam veniam magni totam suscipit assumenda sapiente quam labore ipsam nobis? Sint nihil odio ipsa in dolore eveniet.",
-
+          title: "Automated QR Generator and Attendance System", 
+          description: "A Python-based system that generates unique QR codes for attendance tracking. The system sends these QR codes via email to participants, and users can scan the QR codes to mark their attendance, ensuring an automated and efficient attendance process.",
+          url: "bloodchain.com", // Adjust if necessary
+          imageSrc: "https://i.ibb.co/B6DwZPT/qrgen.png", // Adjust if necessary
+          tech: ["Python", "QR Code Generation", "Email Automation", "Flask", "SQLite"],
+          imgDes: "A visual representation of the QR code-based attendance system in action. The system automates the process of sending and scanning QR codes for attendance marking."
         }
+        
       ];
       
   const containerVariants = {
